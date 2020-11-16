@@ -20,7 +20,7 @@ class Auth with ChangeNotifier {
   Future<void> _authorization(
       String email, String password, String urlSegment) async {
     final url =
-        'https://eme-dev.saas.trood.ru/authorization/api/v1.0/$urlSegment/';
+        "https://eme-dev.saas.trood.ru/authorization/api/v1.0/$urlSegment/";
     Map<String, String> headers = {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
