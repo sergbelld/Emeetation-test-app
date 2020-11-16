@@ -1,4 +1,3 @@
-import 'package:emeetation_test_app/util/constants.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -9,40 +8,9 @@ class InterestItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final interest = Provider.of<Interest>(context);
 
-    void _showSnackBar() {
-      interest.isFavorite == true
-          ? ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                backgroundColor: kSnackBarColor,
-                duration: Duration(milliseconds: 400),
-                content: Text(
-                  'Added To Profile',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 16.0,
-                  ),
-                ),
-              ),
-            )
-          : ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                backgroundColor: kSnackBarColor,
-                duration: Duration(milliseconds: 400),
-                content: Text(
-                  'Canceled',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 16.0,
-                  ),
-                ),
-              ),
-            );
-    }
-
     return GestureDetector(
       onTap: () {
         interest.toggleFavoriteStatus();
-        _showSnackBar();
         FocusScope.of(context).unfocus();
       },
       child: Container(
