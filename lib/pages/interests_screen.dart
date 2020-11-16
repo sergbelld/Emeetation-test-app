@@ -57,7 +57,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
                   child: Padding(
                     padding: Platform.isIOS
                         ? const EdgeInsets.only(right: 14.0)
-                        : const EdgeInsets.only(right: 0.0),
+                        : const EdgeInsets.only(right: 22.0),
                     child: FloatingActionButton(
                       backgroundColor: Theme.of(context).primaryColor,
                       elevation: 0.0,
